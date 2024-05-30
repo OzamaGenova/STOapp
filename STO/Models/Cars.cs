@@ -10,9 +10,25 @@ namespace STO.Models
     public class Cars
     {
         public int Id { get; set; }
+        [Required]
+        public string Make { get; set; }
+        [Required]
+        public string Model { get; set; }
+        [Required]
+        public int Car_Vin { get; set; }
+        [Required]
+        public int Year { get; set; }
+        public string Color { get; set; }
+        [Required]
+        public DateTimeOffset DaTofCreate { get; set; }
 
-        public string Number {  get; set; } = string.Empty;
-        public string Model{ get; set; } = string.Empty ;
-        public DateTime DateTime { get; set; }  
+        public Cars(string make, string model, int carVin, int year, string color)
+        {
+            Make = make;
+            Model = model;
+            Car_Vin = carVin;
+            Year = year;
+            Color = color;
+        }
     }
 }

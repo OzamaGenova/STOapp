@@ -4,17 +4,17 @@
 winexe
 C#
 .cs
-C:\Users\Home\source\repos\STO\STO\obj\Debug\net8.0-windows\
+D:\Study\Proga\STOapp\STO\obj\Debug\net8.0-windows\
 STO
 none
 false
 TRACE;DEBUG;NET;NET8_0;NETCOREAPP
-C:\Users\Home\source\repos\STO\STO\App.xaml
-11407045341
+D:\Study\Proga\STOapp\STO\App.xaml
+21095559725
 
-14-2311126
-212180525265
-MainWindow.xaml;
+21615728033
+212-1775714389
+View\AddNewServicesWindow.xaml;View\MainWindow.xaml;
 
-False
+True
 

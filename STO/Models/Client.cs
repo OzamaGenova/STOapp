@@ -6,8 +6,9 @@ using System.Threading.Tasks;
 
 namespace STO.Models
 {
-    class Client:People
+    public class Client : People
     {
-        List<Cars> car { get; set; } = new List<Cars>();
+        public int CarsId {  get; set; }
+        public virtual required Cars Cars { get; set; } 
     }
 }
