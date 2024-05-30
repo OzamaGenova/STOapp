@@ -48,10 +48,10 @@
                 <ListView ItemsSource="{Binding AllOrders}">
                     <ListView.View>
                         <GridView>
-                            <GridViewColumn Header="Services_Name" />
-                            <GridViewColumn Header="Services_Cost" />
-                            <GridViewColumn Header="Services_TimeOfExecution" />
-                            <GridViewColumn Header="DaTOfCreate" />
+                            <GridViewColumn Header="NameOfProblems"/>
+                            <GridViewColumn Header="Services"/>
+                            <GridViewColumn Header="Workers"/>
+                            <GridViewColumn Header="DaTofCreate"/>
                         </GridView>
                     </ListView.View>
                 </ListView>

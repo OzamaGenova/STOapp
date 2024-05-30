@@ -124,3 +124,5 @@ D:\Study\Proga\STOapp\STO\obj\Debug\net8.0-windows\View\AddNewServicesWindow.g.c
 D:\Study\Proga\STOapp\STO\obj\Debug\net8.0-windows\View\MainWindow.g.cs
 D:\Study\Proga\STOapp\STO\obj\Debug\net8.0-windows\View\AddNewServicesWindow.baml
 D:\Study\Proga\STOapp\STO\obj\Debug\net8.0-windows\View\MainWindow.baml
+D:\Study\Proga\STOapp\STO\obj\Debug\net8.0-windows\View\AddNewOrderWindow.g.cs
+D:\Study\Proga\STOapp\STO\obj\Debug\net8.0-windows\View\AddNewOrderWindow.baml

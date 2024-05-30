@@ -24,7 +24,7 @@ namespace STO.ViewModel
             }
         }
         //методы открытия окон
-        private void OPENAddSevicesWindowmethod()
+        private void OpenAddSevicesWindowmethod()
         {
             AddNewServicesWindow newServices = new AddNewServicesWindow();
             SetCentralPositionAndOpen(newServices);

@@ -20,10 +20,6 @@ namespace STO.View
     {
         public MainWindow()
         {
-            using (ApplicationContext db = new())
-            {
-
-            }
             InitializeComponent();
             DataContext = new DataManageVM();
         }

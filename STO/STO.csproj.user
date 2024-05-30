@@ -7,11 +7,17 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="View\AddNewOrderWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\AddNewServicesWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="View\AddNewOrderWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\AddNewServicesWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
