@@ -8,6 +8,6 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = STO
-build_property.ProjectDir = D:\Study\Proga\STOapp\STO\
+build_property.ProjectDir = C:\Users\Home\source\repos\STOapp\STO\
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 

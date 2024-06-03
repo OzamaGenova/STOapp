@@ -1,14 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Collections.ObjectModel;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.ObjectModel;
 
 namespace STO.Models
 {
     public class Client : People
     {
-        public ObservableCollection<Cars> Cars { get; set; } 
+        public required List<Cars> Cars { get; set; }
     }
 }

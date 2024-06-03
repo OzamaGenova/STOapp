@@ -13,6 +13,7 @@ namespace STO.Models.Data
         public DbSet<Cars> Cars { get; set; }
         public DbSet<Worker> Worker { get; set; } 
         public DbSet<Services> Services { get; set; }
+        public DbSet<Problems> Problems { get; set; }
         public DbSet<Order> Order { get; set; }
         public ApplicationContext()
         {
@@ -20,7 +21,7 @@ namespace STO.Models.Data
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=STOapp1;Username=postgres;Password=mypassword");
+            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=STOapp1;Username=postgres;Password=root");
         }
     }
 }

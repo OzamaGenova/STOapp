@@ -12,11 +12,11 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Text="Services_Name"/>
+            <TextBlock Text="Name"/>
             <TextBox Text=""/>
-            <TextBlock Text="Services_Cost"/>
+            <TextBlock Text="Cost"/>
             <TextBox Text=""/>
-            <TextBlock Text="Services_TimeOfExecution"/>
+            <TextBlock Text="TimeOfExecution"/>
             <TextBox Text=""/>
         </StackPanel>
         <Button Grid.Row="1" Content="Add Services"/>

@@ -5,49 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:STO.View"
         mc:Ignorable="d"
-        Title="Добавление заказа" Height="500" Width="500">
+        Title="Добавление заказа" Height="350" Width="500">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto"/>
-            <RowDefinition Height="380"/>
-            <RowDefinition Height="50"/>
+            <RowDefinition Height="80"/>
         </Grid.RowDefinitions>
 
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="125"/>
-            <ColumnDefinition Width="125"/>
-            <ColumnDefinition Width="125"/>
-            <ColumnDefinition Width="125"/>
-        </Grid.ColumnDefinitions>
-
-        <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Horizontal" Margin="10">
+        <StackPanel Grid.Row="0" Orientation="Vertical" Margin="10">
             <Label Content="Клиент:"/>
             <ComboBox x:Name="clientComboBox" ItemsSource="{Binding Path=DataContext.Clients}" SelectedItem="{Binding Path=DataContext.Order.Clients, Mode=TwoWay}" Margin="5"/>
-        </StackPanel>
-
-        <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Horizontal" Margin="10">
             <Label Content="Проблема:"/>
             <ComboBox x:Name="problemComboBox" ItemsSource="{Binding Path=DataContext.Problems}" SelectedItem="{Binding Path=DataContext.Order.NameOfProblems, Mode=TwoWay}" Margin="5"/>
-        </StackPanel>
-
-        <StackPanel Grid.Row="0" Grid.Column="2" Orientation="Horizontal" Margin="10">
             <Label Content="Услуга:"/>
             <ComboBox x:Name="serviceComboBox" ItemsSource="{Binding Path=DataContext.Services}" SelectedItem="{Binding Path=DataContext.Order.Services, Mode=TwoWay}" Margin="5"/>
-        </StackPanel>
-
-        <StackPanel Grid.Row="0" Grid.Column="3" Orientation="Horizontal" Margin="10">
             <Label Content="Работник:"/>
             <ComboBox x:Name="workerComboBox" ItemsSource="{Binding DataContext.Workers}" SelectedItem="{Binding DataContext.Order.Workers, Mode=TwoWay}" Margin="5"/>
         </StackPanel>
 
-        <DataGrid Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="4" AutoGenerateColumns="False" Margin="10">
-            <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding ClientName}" Header="Клиент"/>
-                <DataGridTextColumn Binding="{Binding ProblemDescription}" Header="Проблема"/>
-                <DataGridTextColumn Binding="{Binding ServiceName}" Header="Услуга"/>
-                <DataGridTextColumn Binding="{Binding WorkerName}" Header="Работник"/>
-            </DataGrid.Columns>
-        </DataGrid>
-        <Button Grid.Row="2" Grid.Column="0" Grid.ColumnSpan="4" Content="Добавить заказ" Margin="10" Click="AddOrderButton_Click"/>
+        <Button Grid.Row="1"  Grid.ColumnSpan="4" Content="Добавить заказ" Margin="10" Click="AddOrderButton_Click"/>
     </Grid>
 </Window>

@@ -1,9 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.ComponentModel.DataAnnotations;
+
 
 namespace STO.Models
 {
@@ -27,5 +23,6 @@ namespace STO.Models
             Services_Cost = cost;
             Services_TimeOfExecution = time;
         }
+        public Services() { }
     }
 }

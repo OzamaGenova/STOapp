@@ -34,7 +34,6 @@ namespace STO.View
             public ObservableCollection<Problems> Problems { get; }
             public ObservableCollection<Services> Services { get; }
             public ObservableCollection<Worker> Workers { get; }
-            public Order Order { get; set; }
 
             public AddOrderWindowViewModel(ObservableCollection<Client> clients, ObservableCollection<Problems> problems, ObservableCollection<Services> services, ObservableCollection<Worker> workers)
             {
@@ -42,7 +41,6 @@ namespace STO.View
                 Problems = problems;
                 Services = services;
                 Workers = workers;
-                Order = new Order(Problems, Services, Workers);
             }
 
     }

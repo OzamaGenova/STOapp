@@ -15,8 +15,10 @@ namespace STO.Models
         [Required]
         public string Model { get; set; }
         [Required]
-        public int Car_Vin { get; set; }
+        public int CarVin { get; set; }
+        [Required]
         public int Year { get; set; }
+        [Required]
         public string Color { get; set; }
         [Required]
         public DateTimeOffset DaTofCreate { get; set; }
@@ -25,9 +27,10 @@ namespace STO.Models
         {
             this.Make = make;
             this.Model = model;
-            this.Car_Vin = carVin;
+            this.CarVin = carVin;
             this.Year = year;
             this.Color = color;
         }
+        public Cars() { }
     }
 }
