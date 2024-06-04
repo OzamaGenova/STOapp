@@ -21,7 +21,7 @@ namespace STO.Models.Data
         }
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=STOapp1;Username=postgres;Password=root");
+            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=STOapp1;Username=postgres;Password=mypassword");
         }
     }
 }

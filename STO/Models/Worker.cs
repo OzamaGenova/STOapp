@@ -9,5 +9,11 @@ namespace STO.Models
     public class Worker : People
     {
         public decimal Salary { get; set; }
+        public Worker(string name, decimal salary)
+        {
+            Name = name;
+            Salary = salary;
+        }
+        public Worker() { }
     }
 }

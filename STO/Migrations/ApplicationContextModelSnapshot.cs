@@ -76,12 +76,7 @@ namespace STO.Migrations
                         .IsRequired()
                         .HasColumnType("text");
 
-                    b.Property<int?>("OrderId")
-                        .HasColumnType("integer");
-
                     b.HasKey("Id");
-
-                    b.HasIndex("OrderId");
 
                     b.ToTable("Client");
                 });
@@ -94,10 +89,15 @@ namespace STO.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("ClientId")
+                        .HasColumnType("integer");
+
                     b.Property<DateTimeOffset>("DaTofCreate")
                         .HasColumnType("timestamp with time zone");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("ClientId");
 
                     b.ToTable("Order");
                 });
@@ -200,11 +200,15 @@ namespace STO.Migrations
                         .HasForeignKey("ClientId");
                 });
 
-            modelBuilder.Entity("STO.Models.Client", b =>
+            modelBuilder.Entity("STO.Models.Order", b =>
                 {
-                    b.HasOne("STO.Models.Order", null)
-                        .WithMany("Clients")
-                        .HasForeignKey("OrderId");
+                    b.HasOne("STO.Models.Client", "Client")
+                        .WithMany()
+                        .HasForeignKey("ClientId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Client");
                 });
 
             modelBuilder.Entity("STO.Models.Problems", b =>
@@ -235,8 +239,6 @@ namespace STO.Migrations
 
             modelBuilder.Entity("STO.Models.Order", b =>
                 {
-                    b.Navigation("Clients");
-
                     b.Navigation("Problems");
 
                     b.Navigation("Services");

@@ -4,6 +4,10 @@ namespace STO.Models
 {
     public class Client : People
     {
-        public required List<Cars> Cars { get; set; }
+        public List<Cars> Cars { get; set; }
+        public Client(string Name)
+        {
+            this.Name = Name;
+        }
     }
 }

@@ -7,42 +7,67 @@ using Npgsql.EntityFrameworkCore.PostgreSQL.Metadata;
 namespace STO.Migrations
 {
     /// <inheritdoc />
-    public partial class update_models : Migration
+    public partial class update_models1 : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
         {
-            migrationBuilder.CreateTable(
-                name: "Order",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    DaTofCreate = table.Column<DateTimeOffset>(type: "timestamp with time zone", nullable: false)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Order", x => x.Id);
-                });
-
             migrationBuilder.CreateTable(
                 name: "Client",
                 columns: table => new
                 {
                     Id = table.Column<int>(type: "integer", nullable: false)
                         .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    OrderId = table.Column<int>(type: "integer", nullable: true),
                     Name = table.Column<string>(type: "text", nullable: false),
                     DaTofCreate = table.Column<DateTime>(type: "timestamp with time zone", nullable: false)
                 },
                 constraints: table =>
                 {
                     table.PrimaryKey("PK_Client", x => x.Id);
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Cars",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    Make = table.Column<string>(type: "text", nullable: false),
+                    Model = table.Column<string>(type: "text", nullable: false),
+                    CarVin = table.Column<int>(type: "integer", nullable: false),
+                    Year = table.Column<int>(type: "integer", nullable: false),
+                    Color = table.Column<string>(type: "text", nullable: false),
+                    DaTofCreate = table.Column<DateTimeOffset>(type: "timestamp with time zone", nullable: false),
+                    ClientId = table.Column<int>(type: "integer", nullable: true)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Cars", x => x.Id);
                     table.ForeignKey(
-                        name: "FK_Client_Order_OrderId",
-                        column: x => x.OrderId,
-                        principalTable: "Order",
+                        name: "FK_Cars_Client_ClientId",
+                        column: x => x.ClientId,
+                        principalTable: "Client",
                         principalColumn: "Id");
+                });
+
+            migrationBuilder.CreateTable(
+                name: "Order",
+                columns: table => new
+                {
+                    Id = table.Column<int>(type: "integer", nullable: false)
+                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
+                    ClientId = table.Column<int>(type: "integer", nullable: false),
+                    DaTofCreate = table.Column<DateTimeOffset>(type: "timestamp with time zone", nullable: false)
+                },
+                constraints: table =>
+                {
+                    table.PrimaryKey("PK_Order", x => x.Id);
+                    table.ForeignKey(
+                        name: "FK_Order_Client_ClientId",
+                        column: x => x.ClientId,
+                        principalTable: "Client",
+                        principalColumn: "Id",
+                        onDelete: ReferentialAction.Cascade);
                 });
 
             migrationBuilder.CreateTable(
@@ -110,39 +135,15 @@ namespace STO.Migrations
                         principalColumn: "Id");
                 });
 
-            migrationBuilder.CreateTable(
-                name: "Cars",
-                columns: table => new
-                {
-                    Id = table.Column<int>(type: "integer", nullable: false)
-                        .Annotation("Npgsql:ValueGenerationStrategy", NpgsqlValueGenerationStrategy.IdentityByDefaultColumn),
-                    Make = table.Column<string>(type: "text", nullable: false),
-                    Model = table.Column<string>(type: "text", nullable: false),
-                    CarVin = table.Column<int>(type: "integer", nullable: false),
-                    Year = table.Column<int>(type: "integer", nullable: false),
-                    Color = table.Column<string>(type: "text", nullable: false),
-                    DaTofCreate = table.Column<DateTimeOffset>(type: "timestamp with time zone", nullable: false),
-                    ClientId = table.Column<int>(type: "integer", nullable: true)
-                },
-                constraints: table =>
-                {
-                    table.PrimaryKey("PK_Cars", x => x.Id);
-                    table.ForeignKey(
-                        name: "FK_Cars_Client_ClientId",
-                        column: x => x.ClientId,
-                        principalTable: "Client",
-                        principalColumn: "Id");
-                });
-
             migrationBuilder.CreateIndex(
                 name: "IX_Cars_ClientId",
                 table: "Cars",
                 column: "ClientId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Client_OrderId",
-                table: "Client",
-                column: "OrderId");
+                name: "IX_Order_ClientId",
+                table: "Order",
+                column: "ClientId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_Problems_OrderId",
@@ -176,10 +177,10 @@ namespace STO.Migrations
                 name: "Worker");
 
             migrationBuilder.DropTable(
-                name: "Client");
+                name: "Order");
 
             migrationBuilder.DropTable(
-                name: "Order");
+                name: "Client");
         }
     }
 }
