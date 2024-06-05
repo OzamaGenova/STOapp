@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:STO.View"
         mc:Ignorable="d"
-        Title="MainWindow" Height="500" Width="1000">
+        Title="MainWindow" Height="500" Width="900">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
@@ -19,7 +19,7 @@
                 <ListView ItemsSource="{Binding AllServices}">
                     <ListView.View>
                         <GridView>
-                            <GridViewColumn Header="Services_Name" />
+                            <GridViewColumn Header="Services_Title" />
                             <GridViewColumn Header="Services_Cost" />
                             <GridViewColumn Header="Services_TimeOfExecution" />
                             <GridViewColumn Header="DaTOfCreate" />
@@ -56,10 +56,60 @@
                     </ListView.View>
                 </ListView>
             </TabItem>
+            <TabItem Name="Cars">
+                <TabItem.Header>
+                    <TextBlock Text="Cars"/>
+                </TabItem.Header>
+                <ListView ItemsSource="{Binding AllCars}">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Make"/>
+                            <GridViewColumn Header="Model"/>
+                            <GridViewColumn Header="CarVin"/>
+                            <GridViewColumn Header="Year"/>
+                            <GridViewColumn Header="Color"/>
+                            <GridViewColumn Header="DaTofCreate"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </TabItem>
+            <TabItem Name="Problems">
+                <TabItem.Header>
+                    <TextBlock Text="Problems"/>
+                </TabItem.Header>
+                <ListView ItemsSource="{Binding AllProblems}">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Title"/>
+                            <GridViewColumn Header="Description"/>
+                            <GridViewColumn Header="Cost"/>
+                            <GridViewColumn Header="DaTofCreate"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </TabItem>
+            <TabItem Name="Workers">
+                <TabItem.Header>
+                    <TextBlock Text="Workers"/>
+                </TabItem.Header>
+                <ListView ItemsSource="{Binding AllWorkers}">
+                    <ListView.View>
+                        <GridView>
+                            <GridViewColumn Header="Name"/>
+                            <GridViewColumn Header="Salary"/>
+                            <GridViewColumn Header="DaTofCreate"/>
+                        </GridView>
+                    </ListView.View>
+                </ListView>
+            </TabItem>
         </TabControl>
         <StackPanel Grid.Row="1" Orientation="Horizontal"
                     HorizontalAlignment="Right">
-            <Button Content="Новая услуга" Command="{Binding}"/>
+            <Button Content="Новая услуга" Margin="10" Command="{Binding}"/>
+            <Button Content="Новый клиент" Margin="10" Command="{Binding}"/>
+            <Button Content="Новая машина" Margin="10" Command="{Binding}"/>
+            <Button Content="Новая проблема" Margin="10" Command="{Binding}"/>
+            <Button Content="Новый заказ" Background="Aqua" Margin="10" Command="{Binding}"/>
         </StackPanel>
                     
     </Grid>

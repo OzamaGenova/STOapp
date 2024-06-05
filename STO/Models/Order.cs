@@ -17,6 +17,7 @@ namespace STO.Models
             Problems = problems ?? throw new ArgumentNullException(nameof(problems));
             Services = services ?? throw new ArgumentNullException(nameof(services));
             Workers = workers ?? throw new ArgumentNullException(nameof(workers));
+            DateTimeOffset DaTofCreate = DateTimeOffset.Now;
         }
         public Order()
         {

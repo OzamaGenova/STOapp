@@ -30,6 +30,7 @@ namespace STO.Models
             this.CarVin = carVin;
             this.Year = year;
             this.Color = color;
+            DateTimeOffset DaTofCreate = DateTimeOffset.Now;
         }
         public Cars() { }
     }

@@ -7,21 +7,87 @@
     </ApplicationDefinition>
   </ItemGroup>
   <ItemGroup>
+    <Compile Update="View\AddNewCarWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\AddNewClientWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
     <Compile Update="View\AddNewOrderWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\AddNewProblemWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
     <Compile Update="View\AddNewServicesWindow.xaml.cs">
       <SubType>Code</SubType>
     </Compile>
+    <Compile Update="View\AddNewWorkerWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\EditCarWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\EditClientWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\EditOrderWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\EditProblemWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\EditServicesWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\EditWorkerWindow.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Update="View\MessageView.xaml.cs">
+      <SubType>Code</SubType>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Page Update="View\AddNewCarWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AddNewClientWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\AddNewOrderWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\AddNewProblemWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
     <Page Update="View\AddNewServicesWindow.xaml">
       <SubType>Designer</SubType>
     </Page>
+    <Page Update="View\AddNewWorkerWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\EditCarWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\EditClientWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\EditOrderWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\EditProblemWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\EditServicesWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\EditWorkerWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
     <Page Update="View\MainWindow.xaml">
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Update="View\MessageView.xaml">
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>

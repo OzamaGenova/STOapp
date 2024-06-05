@@ -8,6 +8,7 @@ namespace STO.Models
         public Client(string Name)
         {
             this.Name = Name;
+            DateTimeOffset DaTofCreate = DateTimeOffset.Now;
         }
     }
 }

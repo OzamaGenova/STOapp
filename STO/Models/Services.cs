@@ -22,6 +22,7 @@ namespace STO.Models
             Services_Title = title;
             Services_Cost = cost;
             Services_TimeOfExecution = time;
+            DateTimeOffset DaTofCreate = DateTimeOffset.Now;    
         }
         public Services() { }
     }

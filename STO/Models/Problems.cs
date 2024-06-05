@@ -24,6 +24,7 @@ namespace STO.Models
             Title = title;
             Description = description;
             Cost = cost;
+            DateTimeOffset DaTofCreate = DateTimeOffset.Now;
         }
         public Problems() { }
     }

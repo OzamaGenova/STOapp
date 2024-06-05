@@ -13,6 +13,7 @@ namespace STO.Models
         {
             Name = name;
             Salary = salary;
+            DateTimeOffset DaTofCreate = DateTimeOffset.Now;
         }
         public Worker() { }
     }
