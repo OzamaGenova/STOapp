@@ -7,10 +7,13 @@ using System.Windows.Input;
 
 namespace STO.ViewModel
 {
-    public class RelayCommand
+    public class RelayCommand : ICommand
     {
         private Action<object> _execute;
         private Func<object, bool> _canExecute;
+
+        public event EventHandler? CanExecuteChanged;
+
         public event EventHandler CanExecutedChanged
         {
             add { CommandManager.RequerySuggested += value; }

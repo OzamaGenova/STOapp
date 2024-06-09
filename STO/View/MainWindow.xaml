@@ -3,7 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:STO.View"
+        xmlns:local="clr-namespace:STO.View" xmlns:viewmodel="clr-namespace:STO.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:DataManageVM}"
         mc:Ignorable="d"
         Title="MainWindow" Height="500" Width="900">
     <Grid>
@@ -105,11 +105,11 @@
         </TabControl>
         <StackPanel Grid.Row="1" Orientation="Horizontal"
                     HorizontalAlignment="Right">
-            <Button Content="Новая услуга" Margin="10" Command="{Binding}"/>
-            <Button Content="Новый клиент" Margin="10" Command="{Binding}"/>
-            <Button Content="Новая машина" Margin="10" Command="{Binding}"/>
-            <Button Content="Новая проблема" Margin="10" Command="{Binding}"/>
-            <Button Content="Новый заказ" Background="Aqua" Margin="10" Command="{Binding}"/>
+            <Button Content="Новая услуга" Margin="10" Command="{Binding  OpenNewServicesWind}"/>
+            <Button Content="Новый клиент" Margin="10" Command="{Binding  OpenNewClientWind}"/>
+            <Button Content="Новая машина" Margin="10" Command="{Binding OpenAddCarsWind}"/>
+            <Button Content="Новая проблема" Margin="10" Command="{Binding OpenNewProblemsWind}"/>
+            <Button Content="Новый заказ" Background="Aqua" Margin="10" Command="{Binding OpenNewOrdersWind}"/>
         </StackPanel>
                     
     </Grid>
