@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Study\\Proga\\STOapp\\STO\\STO.csproj": {}
+    "C:\\Users\\Home\\source\\repos\\STOapp\\STO\\STO.csproj": {}
   },
   "projects": {
-    "D:\\Study\\Proga\\STOapp\\STO\\STO.csproj": {
+    "C:\\Users\\Home\\source\\repos\\STOapp\\STO\\STO.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Study\\Proga\\STOapp\\STO\\STO.csproj",
+        "projectUniqueName": "C:\\Users\\Home\\source\\repos\\STOapp\\STO\\STO.csproj",
         "projectName": "STO",
-        "projectPath": "D:\\Study\\Proga\\STOapp\\STO\\STO.csproj",
-        "packagesPath": "C:\\Users\\genov\\.nuget\\packages\\",
-        "outputPath": "D:\\Study\\Proga\\STOapp\\STO\\obj\\",
+        "projectPath": "C:\\Users\\Home\\source\\repos\\STOapp\\STO\\STO.csproj",
+        "packagesPath": "C:\\Users\\Home\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Home\\source\\repos\\STOapp\\STO\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\genov\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\Home\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -79,7 +79,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.204/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

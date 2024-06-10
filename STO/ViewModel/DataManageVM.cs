@@ -2,11 +2,14 @@
 using STO.View;
 using System.ComponentModel;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Media;
 
 namespace STO.ViewModel
 {
     public class DataManageVM : INotifyPropertyChanged
     {
+        #region Получить все модели
         //Все услуги
         private List<Services> allServices = DataWorker.GetAllServices();
         public List<Services> AllServices
@@ -73,6 +76,12 @@ namespace STO.ViewModel
                 NotifyPropertyChanged("AllCars");
             }
         }
+        #endregion
+
+        //свойства для услуг
+        public static string? Services_Title { get;set; }
+        public static double Services_Cost { get; set; }
+        public static int Services_TimeOfExecution { get; set; }
 
         #region COMMANDS TO ADD
         private RelayCommand addNewServices;
@@ -82,8 +91,29 @@ namespace STO.ViewModel
             {
                 return addNewServices ?? new RelayCommand(obj =>
                 {
+                    Window wnd = obj as Window;
                     string resultStr = "";
-                    resultStr = DataWorker.CreateServices();
+                    if(Services_Title == null)
+                    {
+                        SetRedBlockControl(wnd,"TitleBlock");
+                    }
+                    if(Services_Cost == 0) 
+                    {
+                        SetRedBlockControl(wnd,"CostBlock");
+                    }
+                    if(Services_TimeOfExecution == 0)
+                    {
+                        SetRedBlockControl(wnd, "TimeBlock");
+                    }
+                    else
+                    {
+                        resultStr = DataWorker.CreateServices(Services_Title,Services_Cost,Services_TimeOfExecution);
+                        UpdateAllDataView();
+                        ShowMessageToUser(resultStr);
+                        SetNullValuesToProreties();
+                        wnd.Close();
+                    }
+                   
                 });
             }
         }
@@ -236,6 +266,37 @@ namespace STO.ViewModel
             window.ShowDialog();
         }
         #endregion
+        #region UPDATE VIEWS
+        private void UpdateAllDataView()
+        {
+            UpdateAllServicesView();
+        }
+        private void UpdateAllServicesView()
+        {
+            AllServices = DataWorker.GetAllServices();
+            MainWindow.AllServicesView.ItemsSource = null;
+            MainWindow.AllServicesView.Items.Clear();
+            MainWindow.AllServicesView.ItemsSource = AllServices;
+            MainWindow.AllServicesView.Items.Refresh();
+        }
+        #endregion
+        private void SetNullValuesToProreties()
+        {
+            //для услуги
+            Services_Title = null;
+            Services_Cost = 0;
+            Services_TimeOfExecution = 0;
+        }
+        private void SetRedBlockControl(Window wnd, string blockName)
+        {
+            Control block = wnd.FindName(blockName) as Control;
+            block.BorderBrush = Brushes.Red;
+        }
+        private void ShowMessageToUser(string message)
+        {
+            MessageView messageView = new MessageView(message);
+            SetCentralPositionAndOpen(messageView);
+        }
 
         public event PropertyChangedEventHandler PropertyChanged;
         private void NotifyPropertyChanged(string propertyName)
