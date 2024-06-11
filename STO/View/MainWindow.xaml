@@ -12,92 +12,88 @@
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
         <TabControl Grid.Row="0">
-            <TabItem Name="Services">
+            <TabItem Name="ServicesTab">
                 <TabItem.Header>
-                    <TextBlock Text="Services"/>
+                    <TextBlock Text="Услуги"/>
                 </TabItem.Header>
-                <ListView ItemsSource="{Binding AllServices}">
+                <ListView x:Name="ViewAllServices" ItemsSource="{Binding AllServices}">
                     <ListView.View>
                         <GridView>
-                            <GridViewColumn Header="Services_Title" />
-                            <GridViewColumn Header="Services_Cost" />
-                            <GridViewColumn Header="Services_TimeOfExecution" />
-                            <GridViewColumn Header="DaTOfCreate" />
+                            <GridViewColumn Header="Название" DisplayMemberBinding="{Binding Path=Services_Title}"/>
+                            <GridViewColumn Header="Стоимость" DisplayMemberBinding="{Binding Path=Services_Cost}" />
+                            <GridViewColumn Header="Время выполнения" DisplayMemberBinding="{Binding Path=Services_TimeOfExecution}"/>
                         </GridView>
                     </ListView.View>
                 </ListView>
             </TabItem>
             <TabItem Name="Clients">
                 <TabItem.Header>
-                    <TextBlock Text="Clients"/>
+                    <TextBlock Text="Клиенты"/>
                 </TabItem.Header>
-                <ListView ItemsSource="{Binding AllClients}">
+                <ListView x:Name="ViewAllClients" ItemsSource="{Binding AllClients}">
                     <ListView.View>
                         <GridView>
-                            <GridViewColumn Header="Client_Name" />
-                            <GridViewColumn Header="Client_Cars" />
-                            <GridViewColumn Header="DaTOfCreate" />
+                            <GridViewColumn Header="Имя клиента" DisplayMemberBinding="{Binding Path=Name}"/>
+                            <GridViewColumn Header="Машины клиента" DisplayMemberBinding="{Binding Path=Cars}"/>
                         </GridView>
                     </ListView.View>
                 </ListView>
             </TabItem>
             <TabItem Name="Orders">
                 <TabItem.Header>
-                    <TextBlock Text="Orders"/>
+                    <TextBlock Text="Заказы"/>
                 </TabItem.Header>
-                <ListView ItemsSource="{Binding AllOrders}">
+                <ListView x:Name="ViewAllOrders" ItemsSource="{Binding AllOrders}">
                     <ListView.View>
                         <GridView>
-                            <GridViewColumn Header="NameOfProblems"/>
-                            <GridViewColumn Header="Services"/>
-                            <GridViewColumn Header="Workers"/>
-                            <GridViewColumn Header="DaTofCreate"/>
+                            <GridViewColumn Header="Клиент" DisplayMemberBinding="{Binding Path=Client}"/>
+                            <GridViewColumn Header="Машины" DisplayMemberBinding="{Binding Path=Cars}"/>
+                            <GridViewColumn Header="Название проблемы" DisplayMemberBinding="{Binding Path=Problems}"/>
+                            <GridViewColumn Header="Услуги" DisplayMemberBinding="{Binding Path=Services}"/>
+                            <GridViewColumn Header="Работники" DisplayMemberBinding="{Binding Path=Workers}"/>
                         </GridView>
                     </ListView.View>
                 </ListView>
             </TabItem>
             <TabItem Name="Cars">
                 <TabItem.Header>
-                    <TextBlock Text="Cars"/>
+                    <TextBlock Text="Машины"/>
                 </TabItem.Header>
-                <ListView ItemsSource="{Binding AllCars}">
+                <ListView x:Name="ViewAllCars" ItemsSource="{Binding AllCars}">
                     <ListView.View>
                         <GridView>
-                            <GridViewColumn Header="Make"/>
-                            <GridViewColumn Header="Model"/>
-                            <GridViewColumn Header="CarVin"/>
-                            <GridViewColumn Header="Year"/>
-                            <GridViewColumn Header="Color"/>
-                            <GridViewColumn Header="DaTofCreate"/>
+                            <GridViewColumn Header="Марка" DisplayMemberBinding="{Binding Path=Make}"/>
+                            <GridViewColumn Header="Модель" DisplayMemberBinding="{Binding Path=Model}"/>
+                            <GridViewColumn Header="CarVin" DisplayMemberBinding="{Binding Path=CarVin}"/>
+                            <GridViewColumn Header="Год выпуска" DisplayMemberBinding="{Binding Path=Year}"/>
+                            <GridViewColumn Header="Цвет машины" DisplayMemberBinding="{Binding Path=Color}"/>
                         </GridView>
                     </ListView.View>
                 </ListView>
             </TabItem>
             <TabItem Name="Problems">
                 <TabItem.Header>
-                    <TextBlock Text="Problems"/>
+                    <TextBlock Text="Проблемы"/>
                 </TabItem.Header>
-                <ListView ItemsSource="{Binding AllProblems}">
+                <ListView x:Name="ViewAllProblems" ItemsSource="{Binding AllProblems}">
                     <ListView.View>
                         <GridView>
-                            <GridViewColumn Header="Title"/>
-                            <GridViewColumn Header="Description"/>
-                            <GridViewColumn Header="Cost"/>
-                            <GridViewColumn Header="DaTofCreate"/>
+                            <GridViewColumn Header="Название" DisplayMemberBinding="{Binding Path=Title}"/>
+                            <GridViewColumn Header="Описание" DisplayMemberBinding="{Binding Path=Description}"/>
+                            <GridViewColumn Header="Стоимость" DisplayMemberBinding="{Binding Path=Cost}"/>
                         </GridView>
                     </ListView.View>
                 </ListView>
             </TabItem>
             <TabItem Name="Workers">
                 <TabItem.Header>
-                    <TextBlock Text="Workers"/>
+                    <TextBlock Text="Работники"/>
                 </TabItem.Header>
-                <ListView ItemsSource="{Binding AllWorkers}">
+                <ListView x:Name="ViewAllWorkers" ItemsSource="{Binding AllWorkers}">
                     <ListView.View>
                         <GridView>
-                            <GridViewColumn Header="Name"/>
-                            <GridViewColumn Header="Salary"/>
-                            <GridViewColumn Header="DaTofCreate"/>
+                            <GridViewColumn Header="Имя" DisplayMemberBinding="{Binding Path=Name}"/>
+                            <GridViewColumn Header="Зарплата" DisplayMemberBinding="{Binding Path=Salary}"/>
                         </GridView>
                     </ListView.View>
                 </ListView>

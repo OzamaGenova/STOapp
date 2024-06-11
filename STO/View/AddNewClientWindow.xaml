@@ -3,9 +3,10 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:STO.View"
+        xmlns:local="clr-namespace:STO.View" xmlns:viewmodel="clr-namespace:STO.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:DataManageVM}"
         mc:Ignorable="d"
-        Title="AddNewClientWindow" Height="300" Width="500">
+        Title="AddNewClientWindow" Height="300" Width="500"
+        Name="AddNewClientWind">
     <Grid>
         
         <Grid.RowDefinitions>
@@ -18,17 +19,24 @@
             <ColumnDefinition Width="250"/>
         </Grid.ColumnDefinitions>
 
-        <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel Grid.Row="0" Grid.Column="0" Orientation="Vertical" 
+                    HorizontalAlignment="Center" VerticalAlignment="Center">
             <Label  Width="200" Content="Имя клиента"/>
-            <TextBox Text=""/>
+            <TextBox Name="NameBlock" Text="{Binding Name_Client}"/>
         </StackPanel>
 
-        <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
+        <StackPanel Grid.Row="0" Grid.Column="1" Orientation="Vertical" 
+                    HorizontalAlignment="Center" VerticalAlignment="Center">
             <Label Width="200" Content="Машина"/>
-            <ComboBox x:Name="CarComboBox" ItemsSource="{Binding Path=DataContext.Cars}" SelectedItem="{Binding Path=DataContext.Order.Cars, Mode=TwoWay}" Margin="5"/>
+            <ComboBox Name="ComboBoxCar" ItemsSource="{Binding AllCars}"
+                      DisplayMemberPath="CarVin"
+                      SelectedItem="{Binding Car_Client}"/>
         </StackPanel>
-        
-        <Button Grid.Row="1" Grid.Column="0" Content="Добавить клиента"/>
-        <Button Grid.Row="1" Grid.Column="1" Content="Добавить машину"/>
+
+        <Button Grid.Row="1" Grid.Column="0" Content="Добавить клиента" 
+                Command="{Binding AddNewClient}"
+                CommandParameter="{Binding ElementName=AddNewClientWind}"/>
+        <Button Grid.Row="1" Grid.Column="1" Content="Добавить машину" 
+                Command="{Binding OpenAddCarsWind}"/>
     </Grid>
 </Window>

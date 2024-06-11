@@ -1,4 +1,8 @@
-﻿using System.Windows;
+﻿using STO.Models;
+using STO.ViewModel;
+using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
 namespace STO.View
 {
     /// <summary>
@@ -9,6 +13,7 @@ namespace STO.View
         public AddNewClientWindow()
         {
             InitializeComponent();
+            DataContext = new DataManageVM();
         }
     }
 }

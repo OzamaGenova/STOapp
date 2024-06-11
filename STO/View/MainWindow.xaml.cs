@@ -20,6 +20,12 @@ namespace STO.View
         {
             InitializeComponent();
             DataContext = new DataManageVM();
+            AllServicesView = ViewAllServices;
+            AllCarsView = ViewAllCars;
+            AllProblemsView = ViewAllProblems;
+            AllWorkersView = ViewAllWorkers;
+            AllOrdersView = ViewAllOrders;
+            AllClientView = ViewAllClients;
         }
     }
 }

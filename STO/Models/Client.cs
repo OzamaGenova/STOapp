@@ -4,11 +4,13 @@ namespace STO.Models
 {
     public class Client : People
     {
-        public List<Cars> Cars { get; set; }
-        public Client(string Name)
+        public Cars Car { get; set; }
+        public Client(string Name, Cars Cars)
         {
             this.Name = Name;
+            this.Car = Cars;
             DateTimeOffset DaTofCreate = DateTimeOffset.Now;
         }
+        public Client() { } 
     }
 }

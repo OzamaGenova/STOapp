@@ -30,11 +30,9 @@ namespace STO.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
-                    b.Property<int>("CarVin")
-                        .HasColumnType("integer");
-
-                    b.Property<int?>("ClientId")
-                        .HasColumnType("integer");
+                    b.Property<string>("CarVin")
+                        .IsRequired()
+                        .HasColumnType("text");
 
                     b.Property<string>("Color")
                         .IsRequired()
@@ -56,8 +54,6 @@ namespace STO.Migrations
 
                     b.HasKey("Id");
 
-                    b.HasIndex("ClientId");
-
                     b.ToTable("Cars");
                 });
 
@@ -69,6 +65,9 @@ namespace STO.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("CarId")
+                        .HasColumnType("integer");
+
                     b.Property<DateTime>("DaTofCreate")
                         .HasColumnType("timestamp with time zone");
 
@@ -77,6 +76,8 @@ namespace STO.Migrations
                         .HasColumnType("text");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CarId");
 
                     b.ToTable("Client");
                 });
@@ -89,6 +90,9 @@ namespace STO.Migrations
 
                     NpgsqlPropertyBuilderExtensions.UseIdentityByDefaultColumn(b.Property<int>("Id"));
 
+                    b.Property<int>("CarsId")
+                        .HasColumnType("integer");
+
                     b.Property<int>("ClientId")
                         .HasColumnType("integer");
 
@@ -96,6 +100,8 @@ namespace STO.Migrations
                         .HasColumnType("timestamp with time zone");
 
                     b.HasKey("Id");
+
+                    b.HasIndex("CarsId");
 
                     b.HasIndex("ClientId");
 
@@ -193,20 +199,32 @@ namespace STO.Migrations
                     b.ToTable("Worker");
                 });
 
-            modelBuilder.Entity("STO.Models.Cars", b =>
+            modelBuilder.Entity("STO.Models.Client", b =>
                 {
-                    b.HasOne("STO.Models.Client", null)
-                        .WithMany("Cars")
-                        .HasForeignKey("ClientId");
+                    b.HasOne("STO.Models.Cars", "Car")
+                        .WithMany()
+                        .HasForeignKey("CarId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Car");
                 });
 
             modelBuilder.Entity("STO.Models.Order", b =>
                 {
+                    b.HasOne("STO.Models.Cars", "Cars")
+                        .WithMany()
+                        .HasForeignKey("CarsId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
                     b.HasOne("STO.Models.Client", "Client")
                         .WithMany()
                         .HasForeignKey("ClientId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
+
+                    b.Navigation("Cars");
 
                     b.Navigation("Client");
                 });
@@ -230,11 +248,6 @@ namespace STO.Migrations
                     b.HasOne("STO.Models.Order", null)
                         .WithMany("Workers")
                         .HasForeignKey("OrderId");
-                });
-
-            modelBuilder.Entity("STO.Models.Client", b =>
-                {
-                    b.Navigation("Cars");
                 });
 
             modelBuilder.Entity("STO.Models.Order", b =>

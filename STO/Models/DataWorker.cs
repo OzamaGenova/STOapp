@@ -115,7 +115,7 @@ namespace STO.Models
 
         #region ClientModel
         //добавление нового клиента
-        public static string CreateClient(string name)
+        public static string CreateClient(string name, Cars Cars)
         {
             string result = "Уже существует!";
             using (ApplicationContext db = new ApplicationContext())
@@ -123,7 +123,7 @@ namespace STO.Models
                 bool checkIsExist = db.Client.Any(el => el.Name == name);
                 if (!checkIsExist)
                 {
-                    Client newClient = new Client(name);
+                    Client newClient = new Client(name, Cars);
                     db.Client.Add(newClient);
                     db.SaveChanges();
                     result = "Сделано!";
@@ -215,7 +215,7 @@ namespace STO.Models
 
         #region CarsModel
         //добавить новую машину 
-        public static string CreateCars(string make, string model, int carvin, int year, string color)
+        public static string CreateCars(string make, string model, string carvin, int year, string color)
         {
             string result = "Уже существует!";
             using (ApplicationContext db = new ApplicationContext())
@@ -244,7 +244,7 @@ namespace STO.Models
             return result;
         }
         //редактировать машину
-        public static string EditCars(Cars OldCar, string newMake, string newModel, int newCarvin, int newYear, string newColor)
+        public static string EditCars(Cars OldCar, string newMake, string newModel, string newCarvin, int newYear, string newColor)
         {
             string result = "Такой машины нет";
             using (ApplicationContext db = new ApplicationContext())
@@ -318,7 +318,7 @@ namespace STO.Models
 
         #region OrderModel
         //добавление нового заказа
-        public static string CreateOrder(Client client, List<Problems> problems, List<Services> services, List<Worker> workers)
+        public static string CreateOrder(Client client,Cars cars, List<Problems> problems, List<Services> services, List<Worker> workers)
         {
             string result = "Уже существует!";
             using (ApplicationContext db = new ApplicationContext())
@@ -328,7 +328,7 @@ namespace STO.Models
                 if (!checkIsExist)
                 {
                     // Создаем новый заказ
-                    Order newOrder = new Order(client, problems,services,workers);
+                    Order newOrder = new Order(client,cars,problems,services,workers);
                     db.Order.Add(newOrder);
                     db.SaveChanges();
                     result = "Сделано!";
@@ -349,7 +349,7 @@ namespace STO.Models
             return result;
         }
         //Редактирование заказа
-        public static string EditOrder(Order OldOrder, Client client, List<Problems> problems, List<Services> services, List<Worker> workers)
+        public static string EditOrder(Order OldOrder, Client client, Cars Car, List<Problems> problems, List<Services> services, List<Worker> workers)
         {
             string result = "Такой услуги нет";
             using (ApplicationContext db = new ApplicationContext())
@@ -358,6 +358,7 @@ namespace STO.Models
                 if (orderToUpdate != null)
                 {
                     orderToUpdate.Client = client;
+                    orderToUpdate.Cars = Car;
                     orderToUpdate.Problems = problems;
                     orderToUpdate.Services = services;
                     orderToUpdate.Workers = workers;

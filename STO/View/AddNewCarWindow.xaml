@@ -3,26 +3,32 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:STO.View"
+        xmlns:local="clr-namespace:STO.View" xmlns:viewmodel="clr-namespace:STO.ViewModel" d:DataContext="{d:DesignInstance Type=viewmodel:DataManageVM}"
         mc:Ignorable="d"
-        Title="Добавить новую машину" Height="450" Width="400">
+        Title="Добавить новую машину" Height="450" Width="400"
+        Name="AddNewCarsWind">
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="*"/>
             <RowDefinition Height="50"/>
         </Grid.RowDefinitions>
         <StackPanel Grid.Row="0" Width="200" Orientation="Vertical" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <TextBlock Text="Make"/>
-            <TextBox Text=""/>
-            <TextBlock Text="Model"/>
-            <TextBox Text=""/>
+            <TextBlock Text="Марка"/>
+            <TextBox Name="MakeBlock"  Text="{Binding Make}"/>
+            
+            <TextBlock Text="Модель"/>
+            <TextBox Name="ModelBlock" Text="{Binding Model}"/>
+            
             <TextBlock Text="CarVin"/>
-            <TextBox Text=""/>
-            <TextBlock Text="Year"/>
-            <TextBox Text=""/>
-            <TextBlock Text="Color"/>
-            <TextBox Text=""/>
+            <TextBox Name="CarVinBlock" Text="{Binding CarVin}"/>
+            
+            <TextBlock Text="Год выпуска"/>
+            <TextBox Name="YearBlock" Text="{Binding Year}"/>
+            
+            <TextBlock Text="Цвет"/>
+            <TextBox Name="ColorBlock" Text="{Binding Color}"/>
         </StackPanel>
-        <Button Grid.Row="1" Content="Добавить машину"/>
+        <Button Grid.Row="1" Content="Добавить машину" Command="{Binding AddNewCars}" 
+                CommandParameter="{Binding ElementName=AddNewCarsWind}"/>
     </Grid>
 </Window>
