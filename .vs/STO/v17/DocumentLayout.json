@@ -1,0 +1,142 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Home\\source\\repos\\STOapp\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{7B59AB74-2DB3-4797-A58D-FF61C3CE6781}|STO\\STO.csproj|c:\\users\\home\\source\\repos\\stoapp\\sto\\viewmodel\\datamanagevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B59AB74-2DB3-4797-A58D-FF61C3CE6781}|STO\\STO.csproj|solutionrelative:sto\\viewmodel\\datamanagevm.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B59AB74-2DB3-4797-A58D-FF61C3CE6781}|STO\\STO.csproj|c:\\users\\home\\source\\repos\\stoapp\\sto\\view\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B59AB74-2DB3-4797-A58D-FF61C3CE6781}|STO\\STO.csproj|solutionrelative:sto\\view\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B59AB74-2DB3-4797-A58D-FF61C3CE6781}|STO\\STO.csproj|c:\\users\\home\\source\\repos\\stoapp\\sto\\view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7B59AB74-2DB3-4797-A58D-FF61C3CE6781}|STO\\STO.csproj|solutionrelative:sto\\view\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B59AB74-2DB3-4797-A58D-FF61C3CE6781}|STO\\STO.csproj|c:\\users\\home\\source\\repos\\stoapp\\sto\\view\\messageview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B59AB74-2DB3-4797-A58D-FF61C3CE6781}|STO\\STO.csproj|solutionrelative:sto\\view\\messageview.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B59AB74-2DB3-4797-A58D-FF61C3CE6781}|STO\\STO.csproj|c:\\users\\home\\source\\repos\\stoapp\\sto\\view\\messageview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{7B59AB74-2DB3-4797-A58D-FF61C3CE6781}|STO\\STO.csproj|solutionrelative:sto\\view\\messageview.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B59AB74-2DB3-4797-A58D-FF61C3CE6781}|STO\\STO.csproj|c:\\users\\home\\source\\repos\\stoapp\\sto\\models\\services.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B59AB74-2DB3-4797-A58D-FF61C3CE6781}|STO\\STO.csproj|solutionrelative:sto\\models\\services.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{7B59AB74-2DB3-4797-A58D-FF61C3CE6781}|STO\\STO.csproj|c:\\users\\home\\source\\repos\\stoapp\\sto\\models\\data\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{7B59AB74-2DB3-4797-A58D-FF61C3CE6781}|STO\\STO.csproj|solutionrelative:sto\\models\\data\\applicationcontext.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 2,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Home\\source\\repos\\STOapp\\STO\\View\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "STO\\View\\MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\Home\\source\\repos\\STOapp\\STO\\View\\MainWindow.xaml.cs",
+              "RelativeToolTip": "STO\\View\\MainWindow.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABAAAAAvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T07:45:43.909Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "MainWindow.xaml",
+              "DocumentMoniker": "C:\\Users\\Home\\source\\repos\\STOapp\\STO\\View\\MainWindow.xaml",
+              "RelativeDocumentMoniker": "STO\\View\\MainWindow.xaml",
+              "ToolTip": "C:\\Users\\Home\\source\\repos\\STOapp\\STO\\View\\MainWindow.xaml",
+              "RelativeToolTip": "STO\\View\\MainWindow.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-10T07:45:41.002Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "DataManageVM.cs",
+              "DocumentMoniker": "C:\\Users\\Home\\source\\repos\\STOapp\\STO\\ViewModel\\DataManageVM.cs",
+              "RelativeDocumentMoniker": "STO\\ViewModel\\DataManageVM.cs",
+              "ToolTip": "C:\\Users\\Home\\source\\repos\\STOapp\\STO\\ViewModel\\DataManageVM.cs",
+              "RelativeToolTip": "STO\\ViewModel\\DataManageVM.cs",
+              "ViewState": "AQIAAFcAAAAAAAAAAAAgwF4AAAAqAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T06:18:40.222Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "MessageView.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\Home\\source\\repos\\STOapp\\STO\\View\\MessageView.xaml.cs",
+              "RelativeDocumentMoniker": "STO\\View\\MessageView.xaml.cs",
+              "ToolTip": "C:\\Users\\Home\\source\\repos\\STOapp\\STO\\View\\MessageView.xaml.cs",
+              "RelativeToolTip": "STO\\View\\MessageView.xaml.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACEAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T07:20:23.208Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "MessageView.xaml",
+              "DocumentMoniker": "C:\\Users\\Home\\source\\repos\\STOapp\\STO\\View\\MessageView.xaml",
+              "RelativeDocumentMoniker": "STO\\View\\MessageView.xaml",
+              "ToolTip": "C:\\Users\\Home\\source\\repos\\STOapp\\STO\\View\\MessageView.xaml",
+              "RelativeToolTip": "STO\\View\\MessageView.xaml",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
+              "WhenOpened": "2024-06-10T07:20:13.492Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "ApplicationContext.cs",
+              "DocumentMoniker": "C:\\Users\\Home\\source\\repos\\STOapp\\STO\\Models\\Data\\ApplicationContext.cs",
+              "RelativeDocumentMoniker": "STO\\Models\\Data\\ApplicationContext.cs",
+              "ToolTip": "C:\\Users\\Home\\source\\repos\\STOapp\\STO\\Models\\Data\\ApplicationContext.cs",
+              "RelativeToolTip": "STO\\Models\\Data\\ApplicationContext.cs",
+              "ViewState": "AQIAAAwAAAAAAAAAAAA1wBcAAABvAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T06:21:27.394Z"
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "Services.cs",
+              "DocumentMoniker": "C:\\Users\\Home\\source\\repos\\STOapp\\STO\\Models\\Services.cs",
+              "RelativeDocumentMoniker": "STO\\Models\\Services.cs",
+              "ToolTip": "C:\\Users\\Home\\source\\repos\\STOapp\\STO\\Models\\Services.cs",
+              "RelativeToolTip": "STO\\Models\\Services.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-06-10T07:25:34.348Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
